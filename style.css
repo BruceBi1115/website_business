@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+
+
+
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+.navbar{
+
+    width: 85%;
+    margin: auto;
+    padding: 20px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffb477;
+    /*
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(credit.jpg);
+     */
+}
+.navbar_follow{
+    position: fixed;
+    top: 0;
+    width: 85%;
+    z-index: 10;
+}
+/*
+.navbar_follow + .content {
+    padding-top: 60px;
+}
+
+ */
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: aqua;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width:200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid orange;
+    background: transparent;
+    color:#ffffff;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+}
+span{
+    background: midnightblue;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+.Title2{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    padding-top:100px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1{
+    font-size:40px;
+    font-weight:600;
+    color: gold;
+}
+.Title2 p{
+    color: green;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px;
+
+}
+.Title2-col p{
+    color: green;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 5px;
+
+}
+.row{
+    margin-top:5%;
+    display: flex;
+    /*
+    justify-content: space-between;
+
+     */
+
+}
+.Title2-col{
+    flex-basis: 50%;
+    background: #f5f5f5;
+    border-radius: 10px;
+
+    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding:150px 0px;
+
+    box-sizing: border-box;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.Title2-col:hover{
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.contact-section{
+    transform: translateY(0%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h3{
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form input, form textarea{
+    border:0;
+    margin:10px 0;
+    padding: 20px;
+    outline:none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+.contact-section p{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.Photos{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);;
+
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 150px;
+
+    box-sizing: border-box;
+
+}
+.Photos div{
+    background: saddlebrown;
+    padding: 20px 20px;
+    border-radius: 20px;
+}

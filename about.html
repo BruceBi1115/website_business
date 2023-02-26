@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>About</title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class = "banner">
+            <div id = "nav" class = "navbar">
+                <img src = "logo-social.png" class = "logo">
+                <ul>
+                    <li><a href = "index.html">Home</a></li>
+                    <li><a href = "orders.html">Order</a></li>
+                    <li><a href = jobs.html>Jobs</a></li>
+                    <li><a href = about.html>About Us</a></li>
+                    <li><a href = "business.html">Business</a></li>
+                </ul>
+            </div>
+            <div class = "content">
+                <h1>About Us</h1>
+                <p> Something you'd like to speak <br>We are human</p>
+            </div>
+        </div>
+    </body>
+    <script>
+        window.onscroll = function() {navbar_following()};
+        var navbar = document.getElementById("nav");
+        var sticky = navbar.offsetTop;
+        function navbar_following() {
+            if (window.scrollY>= sticky) {
+                navbar.classList.add("navbar_follow")
+            } else {
+                navbar.classList.remove("navbar_follow");
+            }
+        }
+    </script>
+</html>
+
+<section class = "contact-section">
+    </div class = "container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH WITH US</h3>
+            <input type="text" id="name" placeholder="YOUR NAME" required>
+            <input type="email" id="email" placeholder="YOUR EMAIL" required>
+            <input type="text" id="phone" placeholder="YOUR PHONE NUMBER" required>
+            <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+            <p>
+                <button type="submit"><span></span>SEND</button>
+            </p>
+            <script src = "https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    var message = document.getElementById("message").value;
+                    Email.send({
+                        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                        Host : "smtp.elasticemail.com",
+                        Username : "bizhaoge@gmail.com",
+                        Password : "32EEFB48A99B3538D80BBADED5DCC687AEDE",
+                        To : 'bizhaoge@gmail.com',
+                        From : 'bizhaoge@gmail.com',
+                        Subject : "An enquiry from " + document.getElementById("name").value +"!",
+                        Body : message +'<br><br>'+"Customer Email: "+
+                            document.getElementById("email").value+'<br>'+"Customer Number: "+
+                            document.getElementById("phone").value
+                    }).then(
+                        message => alert(message)
+                    );
+                }
+            </script>
+        </form>
+    </div>
+</section>
+
+
+
