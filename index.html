@@ -1,22 +1,24 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>MJ</title>
         <link rel = "stylesheet" href = "style.css">
     </head>
-
     <body>
-        <div class = "banner">
+        <div class = "banner" >
             <div id = "nav" class = "navbar">
                 <img src = "logo-social.png" class = "logo">
+
                 <ul>
-                    <li><a href = "index.html">Home</a></li>
-                    <li><a href = "#orders">Order</a></li>
-                    <li><a href = "#photo_display">Jobs</a></li>
-                    <li><a href = #name>About Us</a></li>
-                    <li><a href = "#orders">Business</a></li>
+                    <li><a href = "index.html">| Home |</a></li>
+                    <li><a href = "#orders">| Order |</a></li>
+                    <li><a href = "#photo_display">| Jobs |</a></li>
+                    <li><a href = #name>| About Us |</a></li>
+                    <li><a href = "#orders">| Business |</a></li>
                 </ul>
             </div>
             <div class = "content">
+
                 <h1>Title something</h1>
                 <p> Something you'd like to speak <br>balalblablabbalbl</p>
                 <div>
@@ -25,7 +27,26 @@
                 </div>
             </div>
         </div>
-    </body>
+
+        <div class = "sliding-section">
+            <ul class = "sliding-photos">
+                <li><a><img src="background2.jpg"></a></li>
+                <li><a ><img src="background2.jpg"></a></li>
+                <li><a ><img src="background3.jpg"></a></li>
+            </ul>
+        </div>
+
+        <div class="arrow-container">
+            <span class="left-arrow"><<<</span>
+            <span class="right-arrow">>>></span>
+        </div>
+
+        <div class="indicator-container">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
 
     <script>
         window.onscroll = function() {navbar_following()};
@@ -42,6 +63,7 @@
     </script>
 </html>
 
+
 <section class = "Title2" id = "orders">
     <h1>What we can offer....</h1>
     <p>We can offer balabalbalbalbalblabala</p>
@@ -54,8 +76,6 @@
                 NONONONONONONONON<br>
             </p>
         </div>
-
-
     </div>
 </section>
 <section class = "Title2">
@@ -78,7 +98,6 @@
     <div>
         <img id="image" src="matt_works/1.jpg"  height=600 width="600"/>
     </div>
-
     <script>
         var i = 0;
         var photos = new Array();
@@ -97,10 +116,9 @@
                 i += 1;
             }
             photo.src = photos[i];
+
         }
-
         setInterval("slide()",2000);
-
     </script>
 
 </section>

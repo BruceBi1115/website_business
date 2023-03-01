@@ -3,44 +3,97 @@
     padding: 0;
     font-family: sans-serif;
 }
+/*------------------------------*/
+.sliding-photos img{
+    width:100%;
+    height:91%;
+}
+.sliding-section {
+
+    width:100%;
+    height:91%;
+    position: absolute;
+    /*padding: 3px;*/
+
+    overflow: hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    transform: translate(0% , -99%);
+
+
+
+}
+.sliding-section ul{
+    list-style-type: none;
+    width: 6000px;
+}
+.sliding-photos{
+    position: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.indicator-container {
+    position: absolute;
+
+    line-height: 30px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -75px;
+    text-align: center;
+    transform: translate(40%,-50%);
+
+}
+
+.indicator {
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+
+    cursor: pointer;
+
+    background: grey;
+    z-index: 1;
+}
+
+.indicator.active {
+    background: red;
+
+}
+.arrow-container{
+    z-index: 100;
+    width: 500;
+    background: red;
+}
+/*------------------------------*/
 .banner{
     width: 100%;
     height: 100vh;
-
-
-
-    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);
-    background-size: cover;
-    background-position: center;
-
-
+    background: black;
 
 }
 .navbar{
-
     width: 85%;
-    margin: auto;
-    padding: 20px 150px;
+    padding: 0 114px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ffb477;
-    /*
-    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(credit.jpg);
-     */
-}
-.navbar_follow{
-    position: fixed;
-    top: 0;
-    width: 85%;
-    z-index: 10;
-}
-/*
-.navbar_follow + .content {
-    padding-top: 60px;
+    background: black;
+    z-index: 20;
 }
 
- */
+.navbar_follow{
+    position: fixed;
+    top:0;
+    width: 85%;
+    z-index: 20;
+}
+
 .logo{
     width: 120px;
     cursor: pointer;
@@ -55,7 +108,7 @@
 .navbar ul li a{
     font-weight: 600;
     text-decoration: none;
-    color: #fff;
+    color: #dcfffc;
     text-transform: uppercase;
 
 }
@@ -63,7 +116,7 @@
     content:'';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #d4e6ff;
     position: absolute;
     left:0;
     bottom:-10px;
@@ -80,6 +133,7 @@
     transform: translateY(-50%);
     text-align: center;
     color: aqua;
+    z-index: 11;
 }
 .content h1{
     font-size: 70px;
@@ -129,9 +183,13 @@ button:hover{
     text-align: center;
     padding-top:100px;
 
+    background: #ffc9a1;
+    /*
     background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);
     background-size: cover;
     background-position: center;
+
+     */
 }
 
 

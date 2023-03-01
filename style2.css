@@ -1,0 +1,24 @@
+#slider ul a{
+    width: 600px;
+    height: 400px;
+
+}
+#slider{
+    position:absolute;
+    border: solid 2px black;
+    margin:10px 0 0 10px;
+    overflow:hidden;
+}
+ul {
+    position: absolute;
+    list-style-type: none;
+    width: 6000px;
+    /*transition-duration: 0.3s;*/
+}
+li {
+    float: left;
+}
+
+a {
+    display: inline-block;
+}
