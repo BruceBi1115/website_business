@@ -6,12 +6,12 @@
 /*------------------------------*/
 .sliding-photos img{
     width:100%;
-    height:91%;
+    height:90.3%;
 }
 .sliding-section {
 
     width:100%;
-    height:91%;
+    height:90.3%;
     position: absolute;
     /*padding: 3px;*/
 
@@ -20,7 +20,8 @@
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-    transform: translate(0% , -99%);
+
+    transform: translate(0% , -100%);
 
 
 
@@ -33,6 +34,7 @@
     position: center;
     align-items: center;
     display: flex;
+    z-index: 10;
 }
 
 
@@ -63,33 +65,71 @@
 
 .indicator.active {
     background: red;
+}
+
+.left-arrow:hover {
+    background: #d4e6ff;
+}
+.right-arrow:hover {
+    background: #d4e6ff;
+}
+.arrow-container {
+    position: absolute;
+    align-items: center;
+    transform: translateY(30%);
+    width: 100%;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 20;
 
 }
-.arrow-container{
-    z-index: 100;
-    width: 500;
-    background: red;
+
+.arrow-container span {
+    z-index: 20;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    /*display: inline-block;*/
+    text-align: center;
+    line-height: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
 }
+.right-arrow{
+    margin-left:96%;
+    cursor: pointer;
+}
+.left-arrow{
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+
 /*------------------------------*/
 .banner{
     width: 100%;
     height: 100vh;
-    background: black;
+    background: white;
 
 }
 .navbar{
     width: 85%;
-    padding: 0 114px;
+    padding: 1px 114px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: black;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background7.jpg);
+    /*background: rgba(0, 0, 0, 0.8);
+
+     */
     z-index: 20;
 }
 
 .navbar_follow{
     position: fixed;
-    top:0;
+
     width: 85%;
     z-index: 20;
 }
@@ -108,7 +148,7 @@
 .navbar ul li a{
     font-weight: 600;
     text-decoration: none;
-    color: #dcfffc;
+    color: #d0e6ff;
     text-transform: uppercase;
 
 }
@@ -159,7 +199,7 @@ button{
     position:relative;
     overflow: hidden;
 }
-span{
+.content span{
     background: midnightblue;
     height: 100%;
     width: 0%;
