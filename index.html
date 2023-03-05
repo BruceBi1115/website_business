@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MJ</title>
-        <link rel = "stylesheet" href = "style.css">
-    </head>
-    <body>
-        <div class = "banner" >
-            <div id = "nav" class = "navbar">
-                <img src = "logo-social.png" class = "logo" >
+<head>
+    <title>MJ</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div class = "banner" >
+    <div id = "nav" class = "navbar">
+        <img src = "logo-social.png" class = "logo" >
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "#orders">Order</a></li>
+            <li><a href = "#photo_display">Jobs</a></li>
+            <li><a href = #name>About Us</a></li>
+            <li><a href = "#orders">Business</a></li>
+        </ul>
+    </div>
+</div>
 
-                <ul>
-                    <li><a href = "index.html">Home</a></li>
-                    <li><a href = "#orders">Order</a></li>
-                    <li><a href = "#photo_display">Jobs</a></li>
-                    <li><a href = #name>About Us</a></li>
-                    <li><a href = "#orders">Business</a></li>
-                </ul>
-            </div>
-            <div class = "content">
+<div class = "sliding-section">
+    <ul class = "sliding-photos">
+        <li><a><img id = "cover" src="background4.jpg"></a></li>
+    </ul>
 
-                <h1>Title something</h1>
-                <p> Something you'd like to speak <br>balalblablabbalbl</p>
-                <div>
-                    <a href="#orders"><button type="button"><span></span>Start Order</button></a>
-                    <a href="#name"><button type="button"><span></span>Contact Us</button></a>
-                </div>
-            </div>
+    <div class = "content">
+        <h1>Title something</h1>
+        <p> Something you'd like to speak <br>balalblablabbalbl</p>
+        <div>
+            <a href="#orders"><button type="button"><span></span>Start Order</button></a>
+            <a href="#name"><button type="button"><span></span>Contact Us</button></a>
         </div>
+    </div>
 
-        <div class = "sliding-section">
-            <ul class = "sliding-photos">
-                <li><a><img id = "cover" src="background4.jpg"></a></li>
-            </ul>
-        </div>
+</div>
 
-        <div class="indicator-container">
-            <span id = "one" class="indicator active"></span>
-            <span id = "two" class="indicator"></span>
-            <span id = "three"class ="indicator"></span>
-        </div>
+<div class="indicator-container">
+    <span id = "one" class="indicator active"></span>
+    <span id = "two" class="indicator"></span>
+    <span id = "three"class ="indicator"></span>
+</div>
 
-        <div class="arrow-container">
-            <span id="left" class="left-arrow"><</span>
-            <span id = "right" class="right-arrow">></span>
-        </div>
+<div class="arrow-container">
+    <span id="left" class="left-arrow"><</span>
+    <span id = "right" class="right-arrow">></span>
+</div>
 
 
-        <script>
-            window.onscroll = function() {navbar_following()};
-            var navbar = document.getElementById("nav");
+<script>
+    window.onscroll = function() {navbar_following()};
+    var navbar = document.getElementById("nav");
 
-            var sticky = navbar.offsetTop;
-            function navbar_following() {
-                if (window.scrollY>= sticky) {
-                    navbar.classList.add("navbar_follow")
-                } else {
-                    navbar.classList.remove("navbar_follow");
-                }
-            }
-        </script>
-        <script>
-            var k = 0;
-            var photos_cover = new Array();
-            photos_cover[0] = "background4.jpg";
-            photos_cover[1] = "background5.jpg";
-            photos_cover[2] = "background6.jpg";
+    var sticky = navbar.offsetTop;
+    function navbar_following() {
+        if (window.scrollY>= sticky) {
+            navbar.classList.add("navbar_follow")
+        } else {
+            navbar.classList.remove("navbar_follow");
+        }
+    }
+</script>
+<script>
+    var k = 0;
+    var photos_cover = new Array();
+    photos_cover[0] = "background4.jpg";
+    photos_cover[1] = "background5.jpg";
+    photos_cover[2] = "background6.jpg";
 
-            var radios = new Array();
-            radios[0] = document.getElementById("one");
-            radios[1] = document.getElementById("two");
-            radios[2] = document.getElementById("three");
+    var radios = new Array();
+    radios[0] = document.getElementById("one");
+    radios[1] = document.getElementById("two");
+    radios[2] = document.getElementById("three");
 
-            document.getElementById("left").onclick = function () {
-                radios[k].className = "indicator";
-                if (k == 0){
-                    k = 2;
-                }else{
-                    k = k-1;
-                }
-                document.getElementById("cover").src = photos_cover[k];
-                radios[k].className = "indicator active";
-            }
-            document.getElementById("right").onclick = function () {
-                radios[k].className = "indicator";
-                if (k == 2){
-                    k = 0;
-                }else{
-                    k = k+1;
-                }
-                document.getElementById("cover").src = photos_cover[k];
-                radios[k].className = "indicator active";
-            }
+    document.getElementById("left").onclick = function () {
+        radios[k].className = "indicator";
+        if (k == 0){
+            k = 2;
+        }else{
+            k = k-1;
+        }
+        document.getElementById("cover").src = photos_cover[k];
+        radios[k].className = "indicator active";
+    }
+    document.getElementById("right").onclick = function () {
+        radios[k].className = "indicator";
+        if (k == 2){
+            k = 0;
+        }else{
+            k = k+1;
+        }
+        document.getElementById("cover").src = photos_cover[k];
+        radios[k].className = "indicator active";
+    }
 
-        </script>
-    </body>
+</script>
+</body>
 
 </html>
 
