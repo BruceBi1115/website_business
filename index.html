@@ -23,7 +23,7 @@
         <li><a><img alt = "introduction" id = "cover" src="background4.jpg" ></a></li>
     </ul>
     <div id = title class = "content">
-        <h1 id = "p1">Title something</h1>
+        <h1 id = "header">Title something</h1>
         <p id = "p2" > Something you'd like to speak <br>balalblablabbalbl</p>
         <div>
             <a href="#orders"><button type="button"><span></span>Start Order</button></a>
@@ -42,7 +42,7 @@
 </div>
 
 
-<script>
+<script>//nav bar following
     window.onscroll = function() {navbar_following()};
     var navbar = document.getElementById("nav");
 
@@ -55,7 +55,7 @@
         }
     }
 </script>
-<script>
+<script>//photo changing
     var k = 0;
     var photos_cover = new Array();
     photos_cover[0] = "background4.jpg";
@@ -102,8 +102,50 @@
     }
 
 </script>
-</body>
 
+<script>//indicator selection
+    function inactive_all(){
+        radios[0].className = "indicator";
+        radios[1].className = "indicator";
+        radios[2].className = "indicator";
+    }
+
+    document.getElementById("one").onclick = function (){
+        inactive_all()
+        document.getElementById("cover").src = photos_cover[0];
+        radios[0].className = "indicator active";
+        document.getElementById("cover").animate (
+            [{opacity: 0.8},{opacity:1}],{
+                duration: 1000,
+                iterations: 1,
+            }
+        );
+    }
+    document.getElementById("two").onclick = function (){
+        inactive_all()
+        document.getElementById("cover").src = photos_cover[1];
+        radios[1].className = "indicator active";
+        document.getElementById("cover").animate (
+            [{opacity: 0.8},{opacity:1}],{
+                duration: 1000,
+                iterations: 1,
+            }
+        );
+    }
+    document.getElementById("three").onclick = function (){
+        inactive_all()
+        document.getElementById("cover").src = photos_cover[2];
+        radios[2].className = "indicator active";
+        document.getElementById("cover").animate (
+            [{opacity: 0.8},{opacity:1}],{
+                duration: 1000,
+                iterations: 1,
+            }
+        );
+    }
+</script>
+
+</body>
 </html>
 
 
