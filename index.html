@@ -9,20 +9,18 @@
     <div id = "nav" class = "navbar">
         <img src = "logo-social.png" class = "logo" >
         <ul>
-            <li><a href = "index.html">Home</a></li>
-            <li><a href = "#orders">Order</a></li>
+            <li><a href = "#top">Home</a></li>
+            <li><a href = "#">Order</a></li>
             <li><a href = "#photo_display">Jobs</a></li>
             <li><a href = #name>About Us</a></li>
-            <li><a href = "#orders">Business</a></li>
+            <li><a href = "#">Business</a></li>
         </ul>
     </div>
 </div>
-
-<div class = "sliding-section">
+<div id = "top" class = "sliding-section">
     <ul class = "sliding-photos">
-        <li><a><img id = "cover" src="background4.jpg"></a></li>
+        <li><a><img alt = "introduction" id = "cover" src="background4.jpg" ></a></li>
     </ul>
-
     <div class = "content">
         <h1>Title something</h1>
         <p> Something you'd like to speak <br>balalblablabbalbl</p>
@@ -31,18 +29,15 @@
             <a href="#name"><button type="button"><span></span>Contact Us</button></a>
         </div>
     </div>
-
-</div>
-
-<div class="indicator-container">
-    <span id = "one" class="indicator active"></span>
-    <span id = "two" class="indicator"></span>
-    <span id = "three"class ="indicator"></span>
-</div>
-
-<div class="arrow-container">
-    <span id="left" class="left-arrow"><</span>
-    <span id = "right" class="right-arrow">></span>
+    <div class="indicator-container">
+        <span id = "one" class="indicator active"></span>
+        <span id = "two" class="indicator"></span>
+        <span id = "three"class ="indicator"></span>
+    </div>
+    <div class="arrow-container">
+        <span id="left" class="left-arrow"><</span>
+        <span id = "right" class="right-arrow">></span>
+    </div>
 </div>
 
 
@@ -64,7 +59,7 @@
     var photos_cover = new Array();
     photos_cover[0] = "background4.jpg";
     photos_cover[1] = "background5.jpg";
-    photos_cover[2] = "background6.jpg";
+    photos_cover[2] = "background6-2.jpg";
 
     var radios = new Array();
     radios[0] = document.getElementById("one");
@@ -78,7 +73,14 @@
         }else{
             k = k-1;
         }
+
         document.getElementById("cover").src = photos_cover[k];
+        document.getElementById("cover").animate (
+            [{opacity: 0.8},{opacity:1}],{
+                duration: 1000,
+                iterations: 1,
+            }
+        );
         radios[k].className = "indicator active";
     }
     document.getElementById("right").onclick = function () {
@@ -89,6 +91,12 @@
             k = k+1;
         }
         document.getElementById("cover").src = photos_cover[k];
+        document.getElementById("cover").animate (
+            [{opacity: 0.8},{opacity:1}],{
+                duration: 1000,
+                iterations: 1,
+            }
+        );
         radios[k].className = "indicator active";
     }
 
@@ -98,37 +106,7 @@
 </html>
 
 
-<section class = "Title2" id = "orders">
-    <h1>What we can offer....</h1>
-    <p>We can offer balabalbalbalbalblabala</p>
-    <div class = "row">
-        <div class = Title2-col>
-            <h3>Subtitle</h3>
-            <p>
-                NONONONONONONONON<br>
-                NONONONONONONONON<br>
-                NONONONONONONONON<br>
-            </p>
-        </div>
-    </div>
-</section>
-<section class = "Title2">
-    <h1>What we can offer....</h1>
-    <p>We can offer balabalbalbalbalblabala</p>
-    <div class = "row">
-        <div class = Title2-col>
-            <h3>Subtitle</h3>
-            <p>
-                NONONONONONONONON<br>
-                NONONONONONONONON<br>
-                NONONONONONONONON<br>
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section class = "Photos" id = "photo_display">
+<div class = "Photos" id = "photo_display">
     <div>
         <img id="image" src="matt_works/1.jpg"  height=600 width="600"/>
     </div>
@@ -155,10 +133,10 @@
         setInterval("slide()",2000);
     </script>
 
-</section>
+</div>
 
-<section class = "contact-section">
-    </div class = "container">
+<div class = "contact-section">
+    <div class = "container">
     <form onsubmit="sendEmail(); reset(); return false;">
         <h3>GET IN TOUCH WITH US</h3>
         <input type="text" id="name" placeholder="YOUR NAME" required>
@@ -190,4 +168,4 @@
         </script>
     </form>
     </div>
-</section>
+</div>

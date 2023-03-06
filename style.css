@@ -5,28 +5,28 @@
 }
 /*------------------------------*/
 .sliding-photos img{
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 
 }
+@keyframes
+fadeInAnimation {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .sliding-section {
-
     width:100%;
     height:100vh;
-    position: absolute;
-    /*padding: 3px;*/
-
     overflow: hidden;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-
-
-
-
 }
 .sliding-section ul{
     list-style-type: none;
-    width: 6000px;
+
 }
 .sliding-photos{
     position: center;
@@ -35,16 +35,14 @@
     z-index: 8;
 }
 
-
 .indicator-container {
     position: absolute;
-
     line-height: 30px;
     bottom: 0;
     left: 50%;
     margin-left: -75px;
     text-align: center;
-    transform: translate(40%,-50%);
+    transform: translate(50%,-50%);
 
 }
 
@@ -80,12 +78,9 @@
     top: 50%;
     margin-top: -25px;
     z-index: 11;
-
-
 }
 
 .arrow-container span {
-
     position: absolute;
     width: 50px;
     height: 50px;
@@ -106,7 +101,6 @@
     margin-left: 1%;
     cursor: pointer;
 }
-
 
 /*------------------------------*/
 .banner{
@@ -145,7 +139,7 @@
 .navbar ul li a{
     font-weight: 600;
     text-decoration: none;
-    color: #d0e6ff;
+    color: #ffe397;
     text-transform: uppercase;
 
 }
@@ -153,7 +147,7 @@
     content:'';
     height: 3px;
     width: 0;
-    background: #d4e6ff;
+    background: #ffe397;
     position: absolute;
     left:0;
     bottom:-10px;
@@ -214,72 +208,18 @@ button:hover{
     border: none;
 }
 
-.Title2{
-    width: 100%;
-    margin:auto;
-    text-align: center;
-    padding-top:100px;
-
-    background: #ffc9a1;
-    /*
-    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background3.jpg);
-    background-size: cover;
-    background-position: center;
-
-     */
-}
-
-
 h1{
     font-size:40px;
     font-weight:600;
     color: gold;
 }
-.Title2 p{
-    color: green;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 5px;
 
-}
-.Title2-col p{
-    color: green;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    padding: 5px;
-
-}
-.row{
-    margin-top:5%;
-    display: flex;
-    /*
-    justify-content: space-between;
-
-     */
-
-}
-.Title2-col{
-    flex-basis: 50%;
-    background: #f5f5f5;
-    border-radius: 10px;
-
-    margin-bottom: 5%;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding:150px 0px;
-
-    box-sizing: border-box;
-}
 h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 }
-.Title2-col:hover{
 
-}
 .container{
     width: 100%;
     height: 100vh;
