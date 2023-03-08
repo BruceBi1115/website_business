@@ -9,9 +9,9 @@
 <div id = "top" class = "sliding-section">
     <div class = "banner" >
         <div id = "nav" class = "navbar">
-            <img src = "logo-social.png" class = "logo" >
+            <img src = "new_logo_trans.png" class = "logo" height="70" >
             <ul>
-                <li><a href = "#index.html">Home</a></li>
+                <li><a href = "index.html">Home</a></li>
                 <li><a href = "#">Order</a></li>
                 <li><a href = "#photo_display">Jobs</a></li>
                 <li><a href = #name>About Us</a></li>
@@ -20,11 +20,12 @@
         </div>
     </div>
     <ul class = "sliding-photos">
-        <li><a><img alt = "introduction" id = "cover" src="background4.jpg" ></a></li>
+        <li><a><img alt = "introduction" id = "cover" src="background0.jpg"></a></li>
     </ul>
     <div id = title class = "content">
-        <h1 id = "header">Title something</h1>
-        <p id = "p2" > Something you'd like to speak <br>balalblablabbalbl</p>
+        <h1 id = cover_title>MJ carpentry and joinery have more than 17 years of working experience as experts<br> in
+            providing high Qualified and Licensed Carpentry Services.</h1>
+        <p id = cover_pra>From custom designs to flawless finishes<br><br>We make every project a masterpiece </p>
         <div>
             <a href="#orders"><button type="button"><span></span>Start Order</button></a>
             <a href="#name"><button type="button"><span></span>Contact Us</button></a>
@@ -40,7 +41,27 @@
         <span id = "right" class="right-arrow">></span>
     </div>
 </div>
+<script>
+    function text_change(index){
+        const title = document.getElementById("cover_title");
+        const para = document.getElementById("cover_pra");
+        if (index ==0 ){
+            title.innerHTML = "MJ carpentry and joinery have more than 17 years of working experience as experts"
+                +'<br>'+"in providing high Qualified and Licensed Carpentry Services.";
+            para.innerHTML = "From custom designs to flawless finishes"+'<br><br>'
+                +"We make every project a masterpiece";
+        }else if (index == 1){
+            title.innerHTML = "Door and window furniture and hardware." +'<br>'+
+                "Fire door and fire door hardware installation." +'<br>'+
+                "Shelving and window sills......";
+            para.innerHTML = "We are offering everything you want!"
+        }else if (index == 2){
+            title.innerHTML = "So, what are you waiting for?";
+            para.innerHTML = "Let us build your vision, one nail at a time.";
+        }
+    }
 
+</script>
 
 <script>//nav bar following
     window.onscroll = function() {navbar_following()};
@@ -58,7 +79,7 @@
 <script>//photo changing
     var k = 0;
     var photos_cover = new Array();
-    photos_cover[0] = "background4.jpg";
+    photos_cover[0] = "background0.jpg";
     photos_cover[1] = "background5.jpg";
     photos_cover[2] = "background6-2.jpg";
 
@@ -67,24 +88,24 @@
     radios[1] = document.getElementById("two");
     radios[2] = document.getElementById("three");
 
-    document.getElementById("left").onclick = function () {
+    function slide_left(){
         radios[k].className = "indicator";
         if (k == 0){
             k = 2;
         }else{
             k = k-1;
         }
-
         document.getElementById("cover").src = photos_cover[k];
+        text_change(k);
         document.getElementById("cover").animate (
             [{opacity: 0.8},{opacity:1}],{
-                duration: 1000,
+                duration: 2000,
                 iterations: 1,
             }
         );
         radios[k].className = "indicator active";
     }
-    document.getElementById("right").onclick = function () {
+    function slide_right(){
         radios[k].className = "indicator";
         if (k == 2){
             k = 0;
@@ -92,56 +113,51 @@
             k = k+1;
         }
         document.getElementById("cover").src = photos_cover[k];
+        text_change(k);
         document.getElementById("cover").animate (
             [{opacity: 0.8},{opacity:1}],{
-                duration: 1000,
+                duration: 2000,
                 iterations: 1,
             }
         );
         radios[k].className = "indicator active";
     }
+    setInterval("slide_right()",3000);
+    document.getElementById("left").onclick = function () {
+        slide_left();
+
+    }
+    document.getElementById("right").onclick = function () {
+        slide_right();
+    }
 
 </script>
-
 <script>//indicator selection
     function inactive_all(){
         radios[0].className = "indicator";
         radios[1].className = "indicator";
         radios[2].className = "indicator";
     }
-
-    document.getElementById("one").onclick = function (){
+    function switch_to(index){
         inactive_all()
-        document.getElementById("cover").src = photos_cover[0];
-        radios[0].className = "indicator active";
+        document.getElementById("cover").src = photos_cover[index];
+        radios[index].className = "indicator active";
+        text_change(index);
         document.getElementById("cover").animate (
             [{opacity: 0.8},{opacity:1}],{
-                duration: 1000,
+                duration: 2000,
                 iterations: 1,
             }
         );
+    }
+    document.getElementById("one").onclick = function (){
+        switch_to(0)
     }
     document.getElementById("two").onclick = function (){
-        inactive_all()
-        document.getElementById("cover").src = photos_cover[1];
-        radios[1].className = "indicator active";
-        document.getElementById("cover").animate (
-            [{opacity: 0.8},{opacity:1}],{
-                duration: 1000,
-                iterations: 1,
-            }
-        );
+        switch_to(1)
     }
     document.getElementById("three").onclick = function (){
-        inactive_all()
-        document.getElementById("cover").src = photos_cover[2];
-        radios[2].className = "indicator active";
-        document.getElementById("cover").animate (
-            [{opacity: 0.8},{opacity:1}],{
-                duration: 1000,
-                iterations: 1,
-            }
-        );
+        switch_to(2)
     }
 </script>
 

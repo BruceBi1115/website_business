@@ -1,13 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: system-ui;
 }
 /*------------------------------*/
 .sliding-photos img{
-    animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    width: 100%;
+    height: 100%;
 
 }
 @keyframes
@@ -37,13 +39,12 @@ fadeInAnimation {
 }
 
 .indicator-container {
-    position: absolute;
+    left:50%;
+    bottom:0;
+    position:absolute;
     line-height: 30px;
-    bottom: 0;
-    left: 50%;
-    margin-left: -75px;
     text-align: center;
-    transform: translate(50%,-50%);
+    transform: translate(-50%,-50%);
 
 }
 
@@ -52,6 +53,7 @@ fadeInAnimation {
     position: relative;
     width: 15px;
     height: 15px;
+    border: 2px solid orange;
     border-radius: 100%;
 
     cursor: pointer;
@@ -59,9 +61,12 @@ fadeInAnimation {
     background: grey;
     z-index: 9;
 }
+.indicator:hover{
+    background: midnightblue;
+}
 
 .indicator.active {
-    background: red;
+    background: midnightblue;
 }
 
 .left-arrow:hover {
@@ -106,12 +111,13 @@ fadeInAnimation {
 /*------------------------------*/
 .banner{
     width: 100%;
-    height: 63.2px;
+    height: 70px;
     z-index: 12;
     background: rgba(0, 0, 0, 0.8);
 }
 .navbar{
     width: 100%;
+    height: 71px;
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
@@ -132,26 +138,33 @@ fadeInAnimation {
     width: 120px;
     cursor: pointer;
 }
+.navbar ul{
+    margin-right: 5%;
+
+}
+.navbar img{
+    margin-left: 10%;
+}
 .navbar ul li{
 
     list-style: none;
     display: inline-block;
-    margin: 0 50px;
+    margin: 0px 30px;
     position: relative;
 }
 
 .navbar ul li a{
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     color: #ffe397;
-    text-transform: uppercase;
+
 
 }
 .navbar ul li::after{
     content:'';
     height: 3px;
     width: 0;
-    background: #ffe397;
+    background: #d4e6ff;
     position: absolute;
     left:0;
     bottom:-10px;
@@ -164,20 +177,19 @@ fadeInAnimation {
 .content{
     width: 100%;
     position: absolute;
-    top:50%;
-    transform: translateY(-50%);
+    top:30%;
+    transform: translateY(20%);
     text-align: center;
-    color: aqua;
+    color: #ff5f10;
     z-index: 9;
 }
 .content h1{
-    font-size: 70px;
-    margin-top: 80px;
-
+    font-size: 30px;
 }
 .content p{
     margin: 20px auto;
-    font-weight: 100;
+    font-weight: 400;
+    font-size: 30px;
     line-height: 25px;
 }
 button{
@@ -195,6 +207,17 @@ button{
     overflow: hidden;
 }
 .content span{
+    background: midnightblue;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.contact-section span{
     background: midnightblue;
     height: 100%;
     width: 0%;
