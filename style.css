@@ -4,8 +4,8 @@
     font-family: system-ui;
 }
 /*------------------------------*/
-.sliding-photos img{
-    animation: fadeInAnimation ease 2s;
+#cover_and_texts{
+    animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
     width: 100%;
@@ -182,9 +182,25 @@ fadeInAnimation {
     text-align: center;
     color: #ff5f10;
     z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.texts{
+    width: 100%;
+    height: 300px;
+    padding: 50px 50px;
+    align-items: center;
+    justify-content: center;
+    background:  rgba(0, 0, 0, 0.5);
+
+    transform:translateY(-30%);
+
 }
 .content h1{
     font-size: 30px;
+
 }
 .content p{
     margin: 20px auto;
@@ -199,7 +215,7 @@ button{
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid orange;
+    border: 2px solid mintcream;
     background: transparent;
     color:#ffffff;
     cursor: pointer;
@@ -207,7 +223,7 @@ button{
     overflow: hidden;
 }
 .content span{
-    background: midnightblue;
+    background: #ffe397;
     height: 100%;
     width: 0%;
     border-radius: 25px;

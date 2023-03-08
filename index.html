@@ -19,18 +19,23 @@
             </ul>
         </div>
     </div>
-    <ul class = "sliding-photos">
-        <li><a><img alt = "introduction" id = "cover" src="background0.jpg"></a></li>
-    </ul>
-    <div id = title class = "content">
-        <h1 id = cover_title>MJ carpentry and joinery have more than 17 years of working experience as experts<br> in
-            providing high Qualified and Licensed Carpentry Services.</h1>
-        <p id = cover_pra>From custom designs to flawless finishes<br><br>We make every project a masterpiece </p>
-        <div>
-            <a href="#orders"><button type="button"><span></span>Start Order</button></a>
-            <a href="#name"><button type="button"><span></span>Contact Us</button></a>
+    <div id = "cover_and_texts">
+        <ul class = "sliding-photos">
+            <li><a><img alt = "introduction" id = "cover" src="background0.jpg"></a></li>
+        </ul>
+        <div id = title class = "content">
+            <div class = "texts">
+                <h1 id = cover_title>MJ carpentry and joinery have more than 17 years of working experience as experts<br> in
+                    providing high Qualified and Licensed Carpentry Services.</h1>
+                <p id = cover_pra>From custom designs to flawless finishes<br><br>We make every project a masterpiece </p>
+                <div>
+                    <a href="#orders"><button type="button"><span></span>Start Order</button></a>
+                    <a href="#name"><button type="button"><span></span>Contact Us</button></a>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="indicator-container">
         <span id = "one" class="indicator active"></span>
         <span id = "two" class="indicator"></span>
@@ -56,7 +61,8 @@
                 "Shelving and window sills......";
             para.innerHTML = "We are offering everything you want!"
         }else if (index == 2){
-            title.innerHTML = "So, what are you waiting for?";
+            title.innerHTML = "So, what are you waiting for?"+'<br>'+"Start by clicking one of the buttons below!";
+            title.innerText.fontsize(40);
             para.innerHTML = "Let us build your vision, one nail at a time.";
         }
     }
@@ -97,9 +103,9 @@
         }
         document.getElementById("cover").src = photos_cover[k];
         text_change(k);
-        document.getElementById("cover").animate (
-            [{opacity: 0.8},{opacity:1}],{
-                duration: 2000,
+        document.getElementById("cover_and_texts").animate (
+            [{opacity: 0.6},{opacity:1}],{
+                duration: 3000,
                 iterations: 1,
             }
         );
@@ -114,15 +120,15 @@
         }
         document.getElementById("cover").src = photos_cover[k];
         text_change(k);
-        document.getElementById("cover").animate (
-            [{opacity: 0.8},{opacity:1}],{
-                duration: 2000,
+        document.getElementById("cover_and_texts").animate (
+            [{opacity: 0.6},{opacity:1}],{
+                duration: 3000,
                 iterations: 1,
             }
         );
         radios[k].className = "indicator active";
     }
-    setInterval("slide_right()",3000);
+    setInterval("slide_right()",4500);
     document.getElementById("left").onclick = function () {
         slide_left();
 
@@ -143,9 +149,9 @@
         document.getElementById("cover").src = photos_cover[index];
         radios[index].className = "indicator active";
         text_change(index);
-        document.getElementById("cover").animate (
-            [{opacity: 0.8},{opacity:1}],{
-                duration: 2000,
+        document.getElementById("cover_and_texts").animate (
+            [{opacity: 0.6},{opacity:1}],{
+                duration: 3000,
                 iterations: 1,
             }
         );
