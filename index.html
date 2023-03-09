@@ -46,6 +46,41 @@
         <span id = "right" class="right-arrow">></span>
     </div>
 </div>
+
+<div class = "info_order_process">
+    <h1 class = "title_order">HOW OUR JOBS ARE DONE!</h1>
+    <div class = "info_order_blocks">
+
+        <div class = "block_1">
+            <h1>1.REQUEST A FREE QUOTE</h1>
+            <p>We will ask a few question to fill out how we can help, then book you in a appointment.You will receive
+                a confirmation and a reminder close to the time.</p>
+        </div>
+        <div class = "block_1">
+            <h1>2.PLACE YOUR ORDER</h1>
+            <p>Once we have finished the measurement at your project, we will provided a quote. Lead time to installation
+                is typically between 3 and 4 weeks.</p>
+        </div>
+        <div class = "block_1">
+            <h1>3.CHECK MEASURE</h1>
+            <p>Your installer will visit, double check measurement, confirm job details,a 30% deposit need to get your
+                job underway, and to order the materials to start this process, book a mutually agreeable date and time
+                to carry out your installation.</p>
+        </div>
+        <div class = "block_1">
+            <h1>4.MANUFACTURE</h1>
+            <p>Your Product are made to measure in our Sydney factory. We will need a further 60% deposit once the
+                product delivered to the work site.</p>
+        </div>
+        <div class = "block_1">
+            <h1>5.INSTALLATION</h1>
+            <p>Your products are professionally fitted by our installers.We will clean up thoroughly.Final payment 10%
+                is due on completion.</p>
+        </div>
+
+    </div>
+
+</div>
 <script>
     function text_change(index){
         const title = document.getElementById("cover_title");
@@ -87,7 +122,7 @@
     var photos_cover = new Array();
     photos_cover[0] = "background0.jpg";
     photos_cover[1] = "background5.jpg";
-    photos_cover[2] = "background6-2.jpg";
+    photos_cover[2] = "background6.jpg";
 
     var radios = new Array();
     radios[0] = document.getElementById("one");
@@ -104,7 +139,7 @@
         document.getElementById("cover").src = photos_cover[k];
         text_change(k);
         document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.6},{opacity:1}],{
+            [{opacity: 0.3},{opacity:1}],{
                 duration: 3000,
                 iterations: 1,
             }
@@ -121,7 +156,7 @@
         document.getElementById("cover").src = photos_cover[k];
         text_change(k);
         document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.6},{opacity:1}],{
+            [{opacity: 0.3},{opacity:1}],{
                 duration: 3000,
                 iterations: 1,
             }
@@ -150,7 +185,7 @@
         radios[index].className = "indicator active";
         text_change(index);
         document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.6},{opacity:1}],{
+            [{opacity: 0.3},{opacity:1}],{
                 duration: 3000,
                 iterations: 1,
             }
