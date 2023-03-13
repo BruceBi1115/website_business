@@ -201,70 +201,108 @@
         switch_to(2)
     }
 </script>
+<div class = "jobs_listing">
+    <h1 class = "jobs_title">Qualified and Licensed Carpentry Services</h1>
+    <div class = "info_order_blocks">
 
+        <div class = "block_1">
+            <p>-Second fix, finishing carpentry services, Skirtings, Architraves (mouldings).<br><br>
+                -Internal and external Doors and Door Jambs.<br><br>
+                -Door and window furniture and hardware.<br><br>
+                -Pivot door systems.<br><br>
+                -Sliding Timber and Aluminium Doors installation.<br><br>
+                -Bi-fold Timber and Aluminium Doors installation.<br><br>
+                -Timber and Aluminium Windows, Bi-fold, Awning, Sliding installation.<br><br>
+                -Double glazing window and door systems.</p>
+        </div>
+        <div class = "block_1">
+            <p>-Window and door gasket sealing systems.<br><br>
+                -Shelving and window sills.<br><br>
+                -Cabinetry installations.<br><br>
+                -Wardrobe installations.<br><br>
+                -Timber Stair case construction and installation.<br><br>
+                -Customised bespoke Joinery.<br><br>
+                -Timber Balustrading and Hand-rails.<br><br>
+                -Decking installation.</p>
+        </div>
+        <div class = "block_1">
+            <p>-Pergola erection.<br><br>
+                -Fire door and fire door hardware installation.<br><br>
+                -Timber wall panelling and wainscotting, picture framing.<br><br>
+                -Partition walling, Wall cladding.<br><br>
+                -Frameless and framed mirror installation.<br><br>
+                -Floating laminate floor laying.<br><br>
+                -Architectural feature carpentry and joinery.</p>
+        </div>
+
+    </div>
+
+</div>
+<div class = "gallery">
+    <h1>Work Gallery</h1>
+    <div class = "photo_container">
+        <img src="matt_works/1.jpg">
+        <img src="matt_works/2.jpg">
+        <img src="matt_works/3.jpg">
+        <img src="matt_works/4.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+        <img src="matt_works/5.jpg">
+
+
+
+
+    </div>
+
+
+</div>
+<div class = "contact-section">
+    <div class = "container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH WITH US</h3>
+            <input type="text" id="name" placeholder="YOUR NAME" required>
+            <input type="email" id="email" placeholder="YOUR EMAIL" required>
+            <input type="text" id="phone" placeholder="YOUR PHONE NUMBER" required>
+            <textarea id="message" rows="4" placeholder="YOUR QUOTE"></textarea>
+            <p>
+                <button type="submit"><span></span>SEND</button>
+            </p>
+            <script src = "https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    var message = document.getElementById("message").value;
+                    Email.send({
+                        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                        Host : "smtp.elasticemail.com",
+                        Username : "bizhaoge@gmail.com",
+                        Password : "32EEFB48A99B3538D80BBADED5DCC687AEDE",
+                        To : 'bizhaoge@gmail.com',
+                        From : 'bizhaoge@gmail.com',
+                        Subject : "An enquiry from " + document.getElementById("name").value +"!",
+                        Body : message +'<br><br>'+"Customer Email: "+
+                            document.getElementById("email").value+'<br>'+"Customer Number: "+
+                            document.getElementById("phone").value
+                    }).then(
+                        message => alert(message)
+                    );
+                }
+            </script>
+        </form>
+    </div>
+</div>
+
+<div class = "bottom">
+
+</div>
 </body>
 </html>
 
 
-<div class = "Photos" id = "photo_display">
-    <div>
-        <img id="image" src="matt_works/1.jpg"  height=600 width="600"/>
-    </div>
-    <script>//gallery photos
-        var i = 0;
-        var photos = new Array();
-        var prefix = "matt_works/"
-        photos[0] = prefix + "1.jpg";
-        photos[1] = prefix + "2.jpg";
-        photos[2] = prefix + "3.jpg";
-        photos[3] = prefix + "4.jpg";
-        photos[4] = prefix + "5.jpg";
 
-        function slide(){
-            var photo = document.getElementById("image");
-            if (i == photos.length-1){
-                i = 0;
-            }else{
-                i += 1;
-            }
-            photo.src = photos[i];
 
-        }
-        setInterval("slide()",2000);
-    </script>
-</div>
 
-<div class = "contact-section">
-    <div class = "container">
-    <form onsubmit="sendEmail(); reset(); return false;">
-        <h3>GET IN TOUCH WITH US</h3>
-        <input type="text" id="name" placeholder="YOUR NAME" required>
-        <input type="email" id="email" placeholder="YOUR EMAIL" required>
-        <input type="text" id="phone" placeholder="YOUR PHONE NUMBER" required>
-        <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
-        <p>
-            <button type="submit"><span></span>SEND</button>
-        </p>
-        <script src = "https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendEmail(){
-                var message = document.getElementById("message").value;
-                Email.send({
-                    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-                    Host : "smtp.elasticemail.com",
-                    Username : "bizhaoge@gmail.com",
-                    Password : "32EEFB48A99B3538D80BBADED5DCC687AEDE",
-                    To : 'bizhaoge@gmail.com',
-                    From : 'bizhaoge@gmail.com',
-                    Subject : "An enquiry from " + document.getElementById("name").value +"!",
-                    Body : message +'<br><br>'+"Customer Email: "+
-                        document.getElementById("email").value+'<br>'+"Customer Number: "+
-                        document.getElementById("phone").value
-                }).then(
-                    message => alert(message)
-                );
-            }
-        </script>
-    </form>
-    </div>
-</div>

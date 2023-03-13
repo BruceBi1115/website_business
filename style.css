@@ -53,7 +53,7 @@ fadeInAnimation {
     position: relative;
     width: 15px;
     height: 15px;
-    border: 2px solid black;
+
     border-radius: 100%;
 
     cursor: pointer;
@@ -256,7 +256,7 @@ button:hover{
 .info_order_process {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url(wood.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url(wood.jpg);
 
 
     /*background-color:#2b2a29;
@@ -267,10 +267,8 @@ button:hover{
     height: auto;
     color: #e7e6e3;
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     transform: translateY(20%);
-
-
 }
 .info_order_blocks{
     width: 90%;
@@ -320,12 +318,57 @@ button:hover{
     margin-top: 15%;
     font-size:14px;
 }
-.container{
-    width: 100%;
-    height: 100vh;
 
+.jobs_listing{
+    width: auto;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url(wood.jpg);
+    text-align: center;
+}
+.jobs_title{
+    color: #e7e6e3;
+    font-size: 50px;
+}
+.jobs_listing p{
+    color: black;
+    font-size: 16px;
+
+}
+.gallery {
+    width: auto;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.5)), url(wood.jpg);
+    text-align: center;
+}
+.gallery h1{
+    color: #e7e6e3;
+    font-size: 50px;
+}
+.photo_container{
+    width: auto;
+    transform: translateY(15%);
+
+}
+.photo_container img{
+    width: 200px;
+    height: 200px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    background: burlywood;
+}
+.photo_container img:hover{
+    transform: scale(200%);
+    transition-duration: 0.2s;
+}
+
+
+
+.container{
+    width: 70%;
+    height: auto;
     display: flex;
     align-items: center;
+
     justify-content: center;
 
 }
@@ -336,8 +379,9 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.5)),url(wood.jpg);
 
-    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(background2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -350,8 +394,9 @@ form{
     border-radius: 10px;
 }
 form h3{
-    color: #555;
+    color: #e7e6e3;
     font-weight: 800;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
@@ -385,4 +430,9 @@ form input, form textarea{
     background: saddlebrown;
     padding: 20px 20px;
     border-radius: 20px;
+}
+.bottom{
+    width: auto;
+    height:20vh;
+    background: saddlebrown;
 }
