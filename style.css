@@ -23,7 +23,7 @@ fadeInAnimation {
 }
 .sliding-section {
     width:100%;
-    height:100vh;
+    height:85vh;
 
     overflow: hidden;
 }
@@ -44,7 +44,7 @@ fadeInAnimation {
     position:absolute;
     line-height: 30px;
     text-align: center;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-350%);
 
 }
 
@@ -53,7 +53,7 @@ fadeInAnimation {
     position: relative;
     width: 15px;
     height: 15px;
-    border: 2px solid orange;
+    border: 2px solid black;
     border-radius: 100%;
 
     cursor: pointer;
@@ -62,11 +62,11 @@ fadeInAnimation {
     z-index: 9;
 }
 .indicator:hover{
-    background: midnightblue;
+    background: gold;
 }
 
 .indicator.active {
-    background: midnightblue;
+    background: gold;
 }
 
 .left-arrow:hover {
@@ -78,7 +78,7 @@ fadeInAnimation {
 .arrow-container {
     position: absolute;
     align-items: center;
-    transform: translateY(30%);
+    transform: translateY(-20%);
     width: 100%;
     height: 50px;
     top: 50%;
@@ -178,7 +178,7 @@ fadeInAnimation {
     width: 100%;
     position: absolute;
     top:30%;
-    transform: translateY(20%);
+    transform: translateY(10%);
     text-align: center;
     color: #ff5f10;
     z-index: 9;
@@ -256,18 +256,25 @@ button:hover{
 .info_order_process {
     width: 100%;
     height: 100vh;
-    text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(background4.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url(wood.jpg);
+
+
+    /*background-color:#2b2a29;
+
+     */
 }
 .title_order{
     height: auto;
-    color: gold;
-    transform: translateY(250%);
+    color: #e7e6e3;
+    text-align: center;
+    font-size: 60px;
+    transform: translateY(20%);
+
 
 }
 .info_order_blocks{
     width: 90%;
-    transform: translateY(15%);
+    transform: translateY(-10%);
     margin-left: 5%;
     margin-top:1%;
 
@@ -279,14 +286,23 @@ button:hover{
 
 }
 .block_1{
+
     width: 24vw;
-    height: 40vh;
-    margin: 10% 5px;
+    height: 70vh;
+    margin: 10% 20px;
+
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(peakpx.jpg);
+
 
     text-align: center;
-    border: 2px solid #ffe397;
-    background: black;
-    border-radius: 10px;
+    border: 1px  solid grey;
+    /*background: #e7e6e3;
+
+     */
+    box-shadow: 10px 5px 5px black;
+
+
+    border-radius: 30px;
 
 }
 .block_1:hover{
@@ -294,12 +310,12 @@ button:hover{
     transition-duration: 0.5s;
 }
 .block_1 h1{
-    color: #ffe397;
+    color: black;
     margin-top: 20%;
     font-size: 18px;
 }
 .block_1 p{
-    color: darkgray;
+    color: black;
     font-weight: 700;
     margin-top: 15%;
     font-size:14px;
