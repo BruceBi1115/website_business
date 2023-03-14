@@ -286,7 +286,7 @@ button:hover{
 .block_1{
 
     width: 24vw;
-    height: 520px;
+    height: 60vh;
     margin: 10% 20px;
 
     background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(peakpx.jpg);
@@ -301,6 +301,9 @@ button:hover{
 
 
     border-radius: 30px;
+
+    position: center;
+    align-items: center;
 
 }
 .block_1:hover{
