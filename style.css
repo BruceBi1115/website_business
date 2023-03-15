@@ -24,7 +24,7 @@ fadeInAnimation {
 .sliding-section {
     width:100%;
     height:100vh;
-
+    background: grey;
     overflow: hidden;
 
 }
@@ -38,7 +38,7 @@ fadeInAnimation {
     align-items: center;
     display: flex;
     z-index: 8;
-    background: black;
+
 
 }
 .sliding-photos img{
