@@ -3,8 +3,7 @@
 <head>
     <title>MJ</title>
     <link rel = "stylesheet" href = "style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.45">
-
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
 </head>
 <body>
 <div id = "top" class = "sliding-section">
@@ -22,7 +21,7 @@
     </div>
     <div id = "cover_and_texts">
         <ul class = "sliding-photos">
-            <li><a><img alt = "introduction" id = "cover" src="background0.jpg"style="width:100%;height: 100%;"></a></li>
+            <li><a><img alt = "introduction" id = "cover" src="background0.jpg"></a></li>
         </ul>
         <div id = title class = "content">
             <div class = "texts">
@@ -36,18 +35,19 @@
             </div>
         </div>
     </div>
-
-    <div class="indicator-container">
-        <span id = "one" class="indicator active"></span>
-        <span id = "two" class="indicator"></span>
-        <span id = "three"class ="indicator"></span>
+    <div class = indicator-section>
+        <div class="indicator-container">
+            <span id = "one" class="indicator active"></span>
+            <span id = "two" class="indicator"></span>
+            <span id = "three"class ="indicator"></span>
+        </div>
     </div>
+
     <div class="arrow-container">
         <span id="left" class="left-arrow"><</span>
         <span id = "right" class="right-arrow">></span>
     </div>
 </div>
-
 <div class = "info_order_process">
     <h1 class = "title_order">HOW OUR JOBS ARE DONE</h1>
     <div class = "info_order_blocks">
@@ -74,7 +74,7 @@
                 product delivered to the work site.</p>
         </div>
         <div class = "block_1">
-            <h1>5.INSTALLATION</h1> 
+            <h1>5.INSTALLATION</h1>
             <p>Your products are professionally fitted by our installers.We will clean up thoroughly.Final payment 10%
                 is due on completion.</p>
         </div>
@@ -103,104 +103,105 @@
     }
 
 </script>
-
 <script>//nav bar following
-    window.onscroll = function() {navbar_following()};
-    var navbar = document.getElementById("nav");
+window.onscroll = function() {navbar_following()};
+var navbar = document.getElementById("nav");
 
-    var sticky = navbar.offsetTop;
-    function navbar_following() {
-        if (window.scrollY>= sticky) {
-            navbar.classList.add("navbar_follow")
-        } else {
-            navbar.classList.remove("navbar_follow");
-        }
+var sticky = navbar.offsetTop;
+function navbar_following() {
+    if (window.scrollY>= sticky) {
+        navbar.classList.add("navbar_follow")
+    } else {
+        navbar.classList.remove("navbar_follow");
     }
+}
 </script>
 
 <script>//photo changing
-    var k = 0;
-    var photos_cover = new Array();
-    photos_cover[0] = "background0.jpg";
-    photos_cover[1] = "background5.jpg";
-    photos_cover[2] = "background6.jpg";
+var k = 0;
+var photos_cover = new Array();
+photos_cover[0] = "background0.jpg";
+photos_cover[1] = "background5.jpg";
+photos_cover[2] = "background6.jpg";
 
-    var radios = new Array();
-    radios[0] = document.getElementById("one");
-    radios[1] = document.getElementById("two");
-    radios[2] = document.getElementById("three");
+var radios = new Array();
+radios[0] = document.getElementById("one");
+radios[1] = document.getElementById("two");
+radios[2] = document.getElementById("three");
 
-    function slide_left(){
-        radios[k].className = "indicator";
-        if (k == 0){
-            k = 2;
-        }else{
-            k = k-1;
+function slide_left(){
+    radios[k].className = "indicator";
+    if (k == 0){
+        k = 2;
+    }else{
+        k = k-1;
+    }
+    document.getElementById("cover").src = photos_cover[k];
+
+
+    text_change(k);
+    document.getElementById("cover_and_texts").animate (
+        [{opacity: 0.3},{opacity:1}],{
+            duration: 3000,
+            iterations: 1,
         }
-        document.getElementById("cover").src = photos_cover[k];
-        text_change(k);
-        document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.3},{opacity:1}],{
-                duration: 3000,
-                iterations: 1,
-            }
-        );
-        radios[k].className = "indicator active";
+    );
+    radios[k].className = "indicator active";
+}
+function slide_right(){
+    radios[k].className = "indicator";
+    if (k == 2){
+        k = 0;
+    }else{
+        k = k+1;
     }
-    function slide_right(){
-        radios[k].className = "indicator";
-        if (k == 2){
-            k = 0;
-        }else{
-            k = k+1;
+    document.getElementById("cover").src = photos_cover[k];
+    text_change(k);
+    document.getElementById("cover_and_texts").animate (
+        [{opacity: 0.3},{opacity:1}],{
+            duration: 3000,
+            iterations: 1,
         }
-        document.getElementById("cover").src = photos_cover[k];
-        text_change(k);
-        document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.3},{opacity:1}],{
-                duration: 3000,
-                iterations: 1,
-            }
-        );
-        radios[k].className = "indicator active";
-    }
-    setInterval("slide_right()",4500);
-    document.getElementById("left").onclick = function () {
-        slide_left();
+    );
+    radios[k].className = "indicator active";
+}
+setInterval("slide_right()",4500);
+document.getElementById("left").onclick = function () {
+    slide_left();
 
-    }
-    document.getElementById("right").onclick = function () {
-        slide_right();
-    }
+}
+document.getElementById("right").onclick = function () {
+    slide_right();
+}
 
 </script>
 <script>//indicator selection
-    function inactive_all(){
-        radios[0].className = "indicator";
-        radios[1].className = "indicator";
-        radios[2].className = "indicator";
-    }
-    function switch_to(index){
-        inactive_all()
-        document.getElementById("cover").src = photos_cover[index];
-        radios[index].className = "indicator active";
-        text_change(index);
-        document.getElementById("cover_and_texts").animate (
-            [{opacity: 0.3},{opacity:1}],{
-                duration: 3000,
-                iterations: 1,
-            }
-        );
-    }
-    document.getElementById("one").onclick = function (){
-        switch_to(0)
-    }
-    document.getElementById("two").onclick = function (){
-        switch_to(1)
-    }
-    document.getElementById("three").onclick = function (){
-        switch_to(2)
-    }
+function inactive_all(){
+    radios[0].className = "indicator";
+    radios[1].className = "indicator";
+    radios[2].className = "indicator";
+}
+function switch_to(index){
+    inactive_all()
+    document.getElementById("cover").src = photos_cover[index];
+    radios[index].className = "indicator active";
+    text_change(index);
+    document.getElementById("cover_and_texts").animate (
+        [{opacity: 0.3},{opacity:1}],{
+            duration: 3000,
+            iterations: 1,
+        }
+    );
+}
+document.getElementById("one").onclick = function (){
+    switch_to(0)
+}
+document.getElementById("two").onclick = function (){
+    switch_to(1)
+}
+document.getElementById("three").onclick = function (){
+    switch_to(2)
+}
 </script>
 <div class = "jobs_listing">
     <h1 class = "jobs_title">Qualified and Licensed Carpentry Services</h1>
@@ -296,10 +297,9 @@
         </form>
     </div>
 </div>
-
 <div class = "bottom">
-
 </div>
+
 </body>
 </html>
 
