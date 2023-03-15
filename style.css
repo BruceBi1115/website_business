@@ -38,6 +38,7 @@ fadeInAnimation {
     align-items: center;
     display: flex;
     z-index: 8;
+    background: black;
 
 }
 .sliding-photos img{
