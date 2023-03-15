@@ -47,7 +47,7 @@ fadeInAnimation {
 }
 
 .indicator-section{
-    height: 15px;
+    height: 0px;
 
     justify-content: center;
     align-items: center;
